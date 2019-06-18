@@ -1,0 +1,43 @@
+.slider
+  &.has-no-transition
+    .slick-track
+      transition:  0s !important
+  &__wrap
+    position: relative
+    font-size: 0
+  &__prev,
+  &__next
+    position: absolute
+    top: 50%
+    transform: translate(0, -50%)
+    width: 40px
+    height: 80px
+    background-color: rgba(#000, .7)
+    +before
+      +icon-arrow(24, 24, 8, #fff, 45)
+      display: inline-block
+      position: absolute
+      top: 28px
+      left: 10px
+  &__prev
+    left: 0
+  &__next
+    right: 0
+    transform: translate(0, -50%) rotate(180deg)
+  &__fullscreen
+    position: absolute
+    top: 10px
+    right: 10px
+    +image('full.svg')
+    background-repeat: none
+    display: inline-block
+    width: 24px
+    height: 24px
+    background-color: rgba(#000, .7)
+    border-radius: 3px
+
+
+.slide
+  &__img
+    height: 435px
+    +cover

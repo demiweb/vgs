@@ -1,0 +1,76 @@
+.items
+  +flex()
+  margin-left: -15px
+  margin-right: -15px
+
+.item
+  $this: &
+  width: calc(33.33333% - 15px)
+  text-align: center
+  margin-left: 15px
+  margin-right: 15px
+  position: relative
+  overflow: hidden
+  display: block
+  +hover
+    #{$this}__cover
+      visibility: visible
+      opacity: 1
+    #{$this}__cover-title
+      transform: translate(0, 0)
+    #{$this}__cover-text
+      transform: translate(0, 0)
+    #{$this}__cover-btn
+      opacity: 1
+  &__title
+    color: #003366
+    font-size: 18px
+    font-weight: 700
+    display: block
+  &__img
+    height: 180px
+    width: 100%
+    +cover
+    display: block
+  &__cover
+    visibility: hidden
+    opacity: 0
+    +coverdiv
+    z-index: 1
+    background-color: rgba(117, 117, 117, 0.97)
+    padding-top: 20px
+    padding-bottom: 5px
+    +tr(opacity .3s, visibility .3s)
+  &__cover-title
+    text-transform: uppercase
+    color: #fff
+    font-size: 17px
+    background-color: rgba(48, 47, 47, 0.8)
+    padding: 10px
+    transform: translate(0, -150%)
+    +tr(transform .3s)
+  &__cover-text
+    padding: 10px 20px 20px
+    font-style: italic
+    color: #fff
+    font-size: 14px
+    +georgia
+    transform: translate(0, 150%)
+    +tr(transform .3s)
+  &__cover-btn
+    opacity: 0
+    +tr(opacity .5s)
+
+  &--tour
+    #{$this}__title
+      text-transform: uppercase
+      font-size: 13px
+      color: #fff
+      margin-bottom: 10px
+      background-color: transparent
+    #{$this}__text
+      font-size: 12px
+      color: #fff
+    #{$this}__meta
+      background-color: rgba(#000, .7)
+      display: block

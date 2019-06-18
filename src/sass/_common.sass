@@ -4,7 +4,7 @@ body
   font-size: $fz
   +reg
   color: $c-text
-  +no-scroll
+  // +no-scroll
 
 input, textarea
   font-family: inherit
@@ -15,3 +15,56 @@ input, textarea
   display: inline-block
   fill: currentColor
   font-size: inherit
+
+.out
+  width: 1300px
+  margin-left: auto
+  margin-right: auto
+
+.bg
+  +cover
+  background-position: 50% 0%
+  position: fixed
+  height: 100%
+  width: 1920px
+  left: 0
+  top: 0
+  z-index: -1
+
+.content
+  width: 1200px
+  margin-left: auto
+  margin-right: auto
+  background-color: rgba(#fff, .7)  
+  border-radius: 10px
+  margin-top: -30px
+  padding-top: 30px
+  padding-bottom: 30px
+  z-index: 2
+  position: relative
+  &__inner
+    background-color: #fff
+    padding-left: 15px
+    padding-right: 15px
+  &__top
+    padding-left: 15px
+    padding-right: 15px
+
+.hr, hr
+  background-color: #d5d5d5
+  border: 0
+  margin: 0
+  height: 6px
+  margin-bottom: 20px
+
+.btn
+  color: #fff
+  display: inline-block
+  text-align: center
+  text-transform: uppercase
+  background-color: #c91426
+  padding: 7px 14px
+  +tr(box-shadow .3s)
+  font-size: 12px
+  +hover
+    box-shadow: 0 0 5px #000

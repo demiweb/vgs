@@ -1,0 +1,22 @@
+<!-- begin popup -->
+<div class="popup js-popup" data-popup="hero_slider">
+  <div class="popup__inner">
+    <!-- begin slider -->
+    <div class="slider__wrap slider--popup__wrap">
+      <div class="slider slider--popup js-slider" data-slider="hero">
+        {% for i in range(0, 10) %}
+        <!-- begin slide -->
+        <div class="slide">
+          <div class="slide__img" style="background-image: url('img/menu-{{ i + 1 }}.jpg');"></div>
+        </div>
+        <!-- end slide -->
+        {% endfor %}
+      </div>
+
+      <button class="slider__prev js-prev"></button>
+      <button class="slider__next js-next"></button>
+    </div>
+    <!-- end slider -->
+  </div>
+</div>
+<!-- end popup -->
