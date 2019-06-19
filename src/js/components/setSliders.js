@@ -10,29 +10,44 @@ export default function setSliders() {
     const $wrap = $(slider).closest('.slider__wrap');
     const $prev = $wrap.find('.js-prev');
     const $next = $wrap.find('.js-next');
+    const $dots = $wrap.find('.js-dots');
     const $fullScreenBtn = $wrap.find('.js-fullscreen');
 
     const options = {
       hero: {
         prevArrow: $prev,
-        nextArrow: $next
+        nextArrow: $next,
+        autoplay: true,
+        fade: true
+      },
+      partners: {
+        prevArrow: $prev,
+        nextArrow: $next,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        autoplay: true,
+        dots: true,
+        appendDots: $dots
+      },
+      gallery: {
+        prevArrow: $prev,
+        nextArrow: $next,
+        fade: true,
+        dots: true,
+        appendDots: $dots,
+        customPaging : (slick, i) => {
+          const slide = slick.$slides[i].querySelector('.slide');
+          if (!slide) return;
+          const src = slide.getAttribute('data-thumb');
+          
+          return `<button><img src="${src}" /></button>`;
+        },
       }
     };
 
     $(slider).on('init reInit afterChange', (e, slick, currentSlide, nextSlide) => {
       currentSlide = currentSlide || 0;
       $fullScreenBtn.attr('data-to', currentSlide);
-      // let i = (currentSlide ? currentSlide : 0) + 1;
-      // $counter.text(i + ' of ' + slick.slideCount);
-     
-      // const $activeSlides = slick.$slider.find('.slick-active');
-      // const activeSlidesLen = $activeSlides.length;
-      
-      // if(activeSlidesLen%2 !== 0) {
-      //   const centerSlideIndex = Math.ceil(activeSlidesLen/2) - 1;
-
-      //   $($activeSlides[centerSlideIndex]).addClass('slick-center'); 
-      // };
     });
 
     $(slider).slick(options[name]);

@@ -1,4 +1,5 @@
 .slider
+  $this: &
   &.has-no-transition
     .slick-track
       transition:  0s !important
@@ -36,6 +37,120 @@
     background-color: rgba(#000, .7)
     border-radius: 3px
 
+  &--partners
+    &__wrap
+      margin-bottom: 35px
+      margin-left: -15px
+      margin-right: -15px
+      .slick-track
+        // margin-left: -12px
+        // margin-right: -12px
+      .slick-slide
+        // margin-right: 12px
+        // margin-left: 12px
+      .slide
+        &__img
+          display: block
+          height: auto
+          height: 178px
+          // padding: 10px 10px 20px
+          font-size: 0
+          +image('partners/carousel_polaroid.png')
+          background-repeat: no-repeat
+          background-position: 50% 50%
+          background-size: auto
+          text-align: center
+          img
+            width: 100%
+            display: inline-block
+            height: 127px
+            width: 201px
+            margin-top: 14px
+      #{$this}__dots
+        // position: absolute
+        text-align: center
+        padding-top: 15px
+        padding-bottom: 15px
+        position: absolute
+        top: 100%
+        left: 0
+        width: 100%
+        height: 35px
+        li
+          display: inline-block
+          margin-left: 4px
+          margin-left: 4px
+          &.slick-active
+            button
+              background-color: #565656
+        button
+          +hidetext
+          display: inline-block
+          width: 6px
+          height: 6px
+          border-radius: 50%
+          background-color: #797979
+      #{$this}__prev,
+      #{$this}__next
+        background-color: transparent
+        transform: translate(0, 0)
+        top: 35px
+        +before
+          border-color: #5b5b5b
+          width: 16px
+          height: 16px
+          border-width: 5px
+          top: 32px
+      #{$this}__prev
+        left: -40px
+      #{$this}__next
+        right: -40px
+        +rotate(180)
+
+  &--gallery
+    &__wrap
+      max-width: 1000px
+      margin-left: auto
+      margin-right: auto
+      margin-top: 20px
+      margin-bottom: 50px
+      #{$this}__prev,
+      #{$this}__next
+        transform: translate(0, 0)
+        background-color: transparent
+        top: auto
+        bottom: 20px
+
+      #{$this}__dots
+        position: absolute
+        top: calc(100% + 10px)
+        left: 0
+        li
+          display: inline-block
+          +notlast
+            margin-right: 5px
+          &.slick-active
+            button
+              border: 1px solid  #036
+        button
+          display: block
+          width: 40px
+          height: 30px
+          position: relative
+          +hover
+            opacity: .5
+          img
+            +coverdiv
+            object-fit: cover
+      #{$this}__prev
+        left: auto
+        right: 60px
+      #{$this}__next
+        +rotate(180)
+        right: 20px
+    .slide
+      &__img
+        height: 360px
 
 .slide
   &__img

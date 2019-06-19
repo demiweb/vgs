@@ -18,13 +18,37 @@ h1, h2, h3, h4, h5, h6
   +roman
   color: #003366
   text-align: center
+  &--md
+    font-size: 18px
+    +reg
+    color: #808080  
+  &--white
+    color: #fff
 
 .h3, h3
-  // font-size: 24px
-  // +georgia
-  // color: #003366
-  // text-align: center
+  font-size: 16px
+  text-transform: uppercase
+  +verdana
+  font-weight: 700
+  text-align: center
+  margin-bottom: 10px
+  &--lg
+    font-size: 21px
+    +reg
+    font-weight: 700
+  &--md
+    text-transform: none
+    font-weight: 400
+    font-size: 15px
+  &--white
+    color: #fff
+
 .h4, h4
+  font-size: 13px
+  text-transform: uppercase
+  color: #808080
+  +verdana
+  font-weight: 700px
 
 .h5, h5
 

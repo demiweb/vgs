@@ -1,0 +1,51 @@
+.features
+  +flex(center, center, row, wrap)
+  &__hr
+    position: relative
+    height: 4px
+    width: 100%
+    background-color: #c2c2c2
+    margin-bottom: 30px
+    +before
+      height: 100%
+      width: 20px
+      background-color: #f5f5f5
+      top: 0
+      left: 50%
+      transform: translate(-50%, 0)
+      position: absolute
+
+.feature
+  margin-bottom: 15px
+  cursor: help
+  position: relative
+  +hover
+    .feature__tooltip
+      display: block
+  &__tooltip
+    position: absolute
+    background-color: rgba(0,0,0,0.7)
+    color: #fafafa
+    padding: 10px
+    border-radius: 5px
+    font-size: 12px
+    line-height: 1.2
+    width: 270px
+    left: 20px
+    top: 100%
+    z-index: 5
+    display: none
+    text-align: center
+    +before
+      // +arr(10,50, rgba(0,0,0,0.7), t)
+      // position: absolute
+      // bottom: 100%
+      // left: 0
+
+      width: 0
+      height: 0
+      border-bottom: 10px solid #4D4C4D
+      border-right: 30px solid transparent
+      position: absolute
+      top: -10px
+      left: 10px

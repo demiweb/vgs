@@ -1,0 +1,28 @@
+<!-- begin partners -->
+<div class="partners">
+  <div class="container--md">
+    <div class="content__title">
+      <h3 class="h3">ПАРТНЕРЫ:</h3>
+    </div>
+    <!-- begin slider -->
+    <div class="slider__wrap slider--partners__wrap">
+      <div class="slider slider--partners js-slider" data-slider="partners">
+        {% for i in range(0, 35) %}
+        <!-- begin slide -->
+        <div class="slide">
+          <a href="#" class="slide__img">
+            <img src="img/partners/{{ i + 1 }}.jpg" alt="">
+          </a>
+        </div>
+        <!-- end slide -->
+        {% endfor %}
+      </div>
+      
+      <div class="slider__dots js-dots"></div>
+      <button class="slider__prev js-prev"></button>
+      <button class="slider__next js-next"></button>
+    </div>
+    <!-- end slider -->
+  </div>
+</div>
+<!-- end partners -->

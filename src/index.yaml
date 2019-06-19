@@ -1,4 +1,8 @@
 ProjectTitle: vgs
 
 PageList:
-- file: page.html
+- file: main.html
+- file: auxpage_tury.html
+- file: auxpage_ekskursionnye-tury.html
+- file: auxpage_parizh-normandija.html
+- file: auxpage_oteli-v-regione-il-de-frans.html

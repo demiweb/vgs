@@ -19,7 +19,7 @@
   </head>
   <body {% if bodyClass %}class="{{ bodyClass }}"{% endif %}>
 
-    <div class="bg" style="background-image: url('img/01-phoneaq.jpg');"></div>
+    <div class="bg js-bg" style="background-image: url('img/01-phoneaq.jpg');"></div>
     <!-- BEGIN content -->
     <div class="out{% if outClass %} {{ outClass }}{% endif %}">
 
@@ -29,8 +29,15 @@
       <main class="main">
         {% include "partials/_hero.html" %}
         <!-- begin content -->
-        <div class="content">
+        <div class="content{% if contentClass %} {{ contentClass }}{% endif %}">
           <div class="content__inner">
+            {% if breadcrumbs %}
+            {{ mixins.list(
+              name = 'breadcrumbs',
+              modifications = { wrap: '', item: '', link: '' },
+              list = breadcrumbs
+            ) }}
+            {% endif %}
             {% block content %}{% endblock %}
             {% include "partials/_footer.html" %}
           </div>          
@@ -38,6 +45,10 @@
         <!-- end content -->      
       </main>
       <!-- end main -->
+
+      {% if order %}
+      {% include "partials/_popup-order.html" %}
+      {% endif %}
 
 
       

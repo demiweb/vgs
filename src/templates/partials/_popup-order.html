@@ -1,0 +1,50 @@
+{%set
+fields = [
+  { name: 'input', type: 'text', label: 'Имя и Фамилия:' },
+  { name: 'input', type: 'email', label: 'Электронная почта:' },
+  { name: 'textarea', type: '', label: 'Телефон и пожелания:', fieldAttributes: { 'rows': '7', 'cols': '38'} }
+]
+%}
+
+<!-- begin popup js-popup -->
+<div class="popup popup--form js-popup" data-popup="order">
+  <div class="popup__inner">
+    <div class="popup__title">
+      <h3 class="h3 h3--white">ЗАКАЗАТЬ ТУР</h3>
+      <a href="#" class="popup__close js-popup-close"></a>
+    </div>
+    
+    <div class="popup__form">
+      <div class="form">
+        <form>
+          {% for i in fields %}
+          <div class="form__field">
+            {{ mixins.input(
+              name = i.name,
+              mod = '',
+              type = i.name,
+              placeholder = '',
+              value = '',
+              fieldClass = '',
+              fieldAttributes = i.fieldAttributes,
+              label = { first: i.label }
+            ) }}
+          </div>
+          {% endfor %}
+          <div class="form__btns">
+            {{ mixins.btn(
+              title = 'Отправить',
+              mod = 'btn--default',
+              href = false
+            ) }}
+
+            <a href="#" class="js-popup-close">Закрыть</a>
+            
+          </div>
+          
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end popup js-popup -->

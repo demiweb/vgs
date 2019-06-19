@@ -1,10 +1,11 @@
 .popup
+  $this: &
   position: fixed
   width: 100%
   height: 100%
   top: 0
   left: 0
-  z-index: 10
+  z-index: 20
   background-color: rgba(#000, .7)
   +flex(center, center)
   visibility: hidden
@@ -15,3 +16,33 @@
     opacity: 1
   &__inner
     width: 100%
+  &__close
+    display: inline-block
+    
+    top: 10px
+    right: 10px
+    +icon-close(21, 2, #858585)
+    position: absolute
+    background-color: #f4f4f4
+    border-radius: 50%
+    &::before,
+    &::after
+      height: 15px
+      top: 3px
+
+  &--form
+    #{$this}__inner
+      background-color: rgba(#f4f4f4, .7)
+      width: 350px
+    #{$this}__title
+      padding-top: 8px
+      padding-bottom: 8px
+      background-color: #464545
+      padding-right: 5px
+      padding-left: 15px
+      position: relative
+      .h3, h3
+        text-align: left
+        margin-bottom: 0
+    #{$this}__form
+      padding: 15px

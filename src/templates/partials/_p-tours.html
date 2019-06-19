@@ -1,0 +1,76 @@
+{%set
+items = [
+  {
+    img: '01-0138.png',
+    title: 'Экскурсионные туры',
+    text: 'Экскурсионные туры во Францию - это прекрасная возможность за одну поездку как можно ближе познакомиться с культурой, традициями и обычаями великолепной страны'
+  },
+  {
+    img: '01-0139.png',
+    title: 'Пляжные туры',
+    text: 'Пляжный отдых во Франции — это гостеприимное Средиземное море и ласковые лучи солнца'
+  },
+  {
+    img: '01-0140.png',
+    title: 'Горнолыжные туры',
+    text: 'Более 6000 лыжных трасс и 300 горнолыжных курортов делают лыжную зону Франции самой большой в мире'
+  },
+  {
+    img: '01-0141.png',
+    title: 'СПА и Талассо туры',
+    text: 'Талассотерапия во Франции традиционно считается лучшей в мире'
+  },
+  {
+    img: '01-0142.png',
+    title: 'Отдых с детьми',
+    text: 'Отдых с детьми во Франции, всегда остаётся на вершине хит-парада туристических предпочтений'
+  },
+  {
+    img: '01-0143.png',
+    title: 'Шоппинг туры',
+    text: 'Франция - самый лучший пример шоппинг-туризма'
+  },
+  {
+    img: '01-0144i8.png',
+    title: 'Событийные туры',
+    text: 'Событийные туры охватывают весь спектр лучших мероприятий во Франции'
+  }
+]
+%}
+
+<!-- begin section -->
+<section class="section">
+  <div class="section__title">
+    <h2 class="h2 h2--md">ТУРЫ</h2>
+  </div>
+
+  <!-- begin items -->
+  <div class="items items--lg">
+    {% for i in items %}
+    <!-- begin item -->
+    <div class="item item--lg">
+      <div class="item__title">{{ i.title }}</div>
+      <div class="item__img" style="background-image: url('img/{{ i.img }}');"></div>
+
+      <div class="item__cover">
+        <div class="item__cover-title">
+          <h3 class="h3 h3--lg h3--white">{{ i.title }}</h3>
+        </div>
+
+        <div class="item__cover-text">{{ i.text }}</div>
+
+        <div class="item__cover-btn">
+          {{ mixins.btn(
+            title = 'Подробнее',
+            mod = 'btn--gray'
+          ) }}
+        </div>
+      </div>
+
+    </div>
+    <!-- end item -->
+    {% endfor %}
+  </div>
+  <!-- end items -->
+</section>
+<!-- end section -->

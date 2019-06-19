@@ -1,4 +1,4 @@
-{% macro input(name, mod, type = 'text', placeholder, value, options, fieldClass, attributes, label, isInline) %}
+{% macro input(name, mod, type = 'text', placeholder, value, options, fieldClass, attributes, fieldAttributes, label, isInline) %}
 <!-- begin {{ name }} -->
 {% if name === 'checkbox' or name === 'radio' %}
 <label class="{{ name }}{% if mod %} {{mod}}{% endif %}" {% for attr, attr_value in attributes %} {{ attr }}="{{ attr_value }}" {% endfor %}>

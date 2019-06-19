@@ -1,0 +1,32 @@
+{%set
+features = [
+  {
+    img: '01-LOGO-01.png',
+    tooltip: 'Самое популярное направление за неделю: Нормандия'
+  },
+  {
+    img: '01-LOGO-02.png',
+    tooltip: 'Самый лучший отель за неделю: Myfair 4*'
+  },
+  {
+    img: '01-LOGO-03.png',
+    tooltip: 'Количество забронированных за неделю: 5-ть горнолыжных FIT туров'
+  }
+]
+%}
+
+<!-- begin features -->
+  <div class="container--md">
+    <div class="features">
+    <div class="features__hr"></div>
+    {% for i in features %}
+    <div class="feature">
+      <img src="img/{{ i.img }}" alt="">
+
+      <div class="feature__tooltip">{{ i.tooltip }}</div>
+    </div>
+    {% endfor %}
+    <div class="features__hr"></div>
+  </div>
+</div>
+<!-- end features -->
