@@ -74,9 +74,27 @@ meta = [
   <!-- begin tour-descr -->
   <div class="tour-descr">
     <div class="tour-descr__top">
-      <p>795 EUR с человека / ½ double Hotel 3</p>
-      <p>950 EUR с человека / ½ double Hotel 4*</p>
-      <p>1015 EUR с человека / ½ double Hotel 4*+</p>
+      <p>
+        795 EUR с человека / ½ double Hotel 3 
+        {{ mixins.btn(
+          title = 'купить',
+          mod = 'btn--gray btn--sm'
+        ) }}
+      </p>
+      <p>
+      950 EUR с человека / ½ double Hotel 4*
+      {{ mixins.btn(
+          title = 'купить',
+          mod = 'btn--gray btn--sm'
+        ) }}
+      </p>
+      <p>
+      1015 EUR с человека / ½ double Hotel 4*+
+      {{ mixins.btn(
+          title = 'купить',
+          mod = 'btn--gray btn--sm'
+        ) }}
+      </p>
     </div>
 
     <div class="tour-descr__text">
@@ -102,11 +120,14 @@ meta = [
     {% endfor %}
   </div>
   <!-- end meta -->
-
-  <!-- begin img-btn -->
-  <a href="#" class="img-btn js-popup-open" data-popup-target="order">
-    <img src="img/01-01-line-menu.png" width="1170" height="54" onmouseout="this.src='img/01-01-line-menu.png';" onmouseover="this.src='img/01-01-line-menu01.png';">
-  </a>
-  <!-- end img-btn -->
+  
+  {# <div class="is-center"> #}
+    <!-- begin btn -->
+    <div class="btn--lg__wrap">
+      <a href="#" class="btn btn--lg js-popup-open" data-popup-target="order">заказать</a>
+    </div>    
+    <!-- end btn -->
+  {# </div> #}
+  
 </section>
 <!-- end section -->

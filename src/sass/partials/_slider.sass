@@ -14,6 +14,8 @@
     width: 40px
     height: 80px
     background-color: rgba(#000, .7)
+    +tr(transform .3s, visibility .3s, opacity .3s)
+    cursor: pointer
     +before
       +icon-arrow(24, 24, 8, #fff, 45)
       display: inline-block
@@ -36,6 +38,34 @@
     height: 24px
     background-color: rgba(#000, .7)
     border-radius: 3px
+    +tr(transform .3s)
+    cursor: pointer
+  &__autoplay
+    @extend #{$this}__fullscreen
+    right: auto
+    left: 10px
+    +image('pau.svg')
+
+
+  &--hero
+    &__wrap
+      overflow: hidden
+      +hover
+        #{$this}__prev
+          transform: translate(0, -50%)
+        #{$this}__next
+          transform: translate(0, -50%) rotate(180deg)
+        #{$this}__autoplay,
+        #{$this}__fullscreen
+          transform: translate(0, 0)
+
+      #{$this}__prev
+        transform: translate(-100%, -50%)
+      #{$this}__next
+        transform: translate(100%, -50%) rotate(180deg)
+      #{$this}__autoplay,
+      #{$this}__fullscreen
+        transform: translate(0, -150%)
 
   &--partners
     &__wrap
@@ -43,29 +73,30 @@
       margin-left: -15px
       margin-right: -15px
       .slick-track
-        // margin-left: -12px
-        // margin-right: -12px
+        margin-left: -8px
+        margin-right: -8px
       .slick-slide
-        // margin-right: 12px
-        // margin-left: 12px
+        margin-right: 8px
+        margin-left: 8px
       .slide
         &__img
           display: block
           height: auto
-          height: 178px
+          // height: 178px
           // padding: 10px 10px 20px
           font-size: 0
-          +image('partners/carousel_polaroid.png')
+          // +image('partners/carousel_polaroid.png')
           background-repeat: no-repeat
           background-position: 50% 50%
           background-size: auto
           text-align: center
           img
             width: 100%
+            max-width: 100%
             display: inline-block
-            height: 127px
-            width: 201px
-            margin-top: 14px
+            // height: 127px
+            // width: 201px
+            // margin-top: 14px
       #{$this}__dots
         // position: absolute
         text-align: center
@@ -94,7 +125,7 @@
       #{$this}__next
         background-color: transparent
         transform: translate(0, 0)
-        top: 35px
+        top: 0
         +before
           border-color: #5b5b5b
           width: 16px
@@ -114,12 +145,35 @@
       margin-right: auto
       margin-top: 20px
       margin-bottom: 50px
+      +hover
+        #{$this}__prev,
+        #{$this}__next
+          visibility: visible
+          opacity: 1
       #{$this}__prev,
       #{$this}__next
         transform: translate(0, 0)
         background-color: transparent
         top: auto
         bottom: 20px
+        width: 30px
+        height: 30px
+        +image('arrows.png')
+        background-repeat: no-repeat
+        visibility: hidden
+        opacity: 0
+        +tr(visibility .3s, opacity .3s)
+        +before
+          display: none
+      #{$this}__prev
+        left: auto
+        right: 60px
+        background-position: 0 0
+      #{$this}__next
+        // +rotate(180)
+        right: 20px
+        background-position: -30px 0
+
 
       #{$this}__dots
         position: absolute
@@ -142,12 +196,54 @@
           img
             +coverdiv
             object-fit: cover
-      #{$this}__prev
-        left: auto
-        right: 60px
+
+  &--sm
+    &__wrap
+      width: 650px
+      margin-left: auto
+      margin-right: auto
+      #{$this}__prev,
       #{$this}__next
-        +rotate(180)
-        right: 20px
+        width: 26px
+        height: 26px
+        background-color: transparent
+        +image('bg_direction_nav.png')
+        background-repeat: no-repeat
+        +before
+          display: none
+        &.slick-disabled
+          visibility: hidden
+          opacity: 0
+      #{$this}__dots
+        position: absolute
+        bottom: 10px
+        text-align: center
+        width: 100%
+        left: 0
+        li
+          display: inline-block
+          margin-left: 5px
+          margin-right: 5px
+          &.slick-active
+            button
+              background-color: #000
+        button
+          display: block
+          width: 11px
+          height: 11px
+          border-radius: 50%
+          background-color: rgba(#000, .5)
+          box-shadow: inset 0 0 3px rgba(0,0,0,0.3)
+          cursor: pointer
+          +hidetext
+      #{$this}__next
+        transform: translate(0, -50%)
+        background-position: -30px 0
+        right: 10px
+      #{$this}__prev
+        background-position: 0 0
+        left: 10px
+      
     .slide
       &__img
         height: 360px

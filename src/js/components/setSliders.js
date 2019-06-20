@@ -12,6 +12,7 @@ export default function setSliders() {
     const $next = $wrap.find('.js-next');
     const $dots = $wrap.find('.js-dots');
     const $fullScreenBtn = $wrap.find('.js-fullscreen');
+    const $autoplayBtn = $wrap.find('.js-autoplay');
 
     const options = {
       hero: {
@@ -23,15 +24,16 @@ export default function setSliders() {
       partners: {
         prevArrow: $prev,
         nextArrow: $next,
-        slidesToShow: 4,
-        slidesToScroll: 4,
-        autoplay: true,
+        slidesToShow: 7,
+        slidesToScroll: 7,
+        // autoplay: true,
         dots: true,
         appendDots: $dots
       },
       gallery: {
         prevArrow: $prev,
         nextArrow: $next,
+        autoplay: true,
         fade: true,
         dots: true,
         appendDots: $dots,
@@ -42,6 +44,14 @@ export default function setSliders() {
           
           return `<button><img src="${src}" /></button>`;
         },
+      },
+      small: {
+        prevArrow: $prev,
+        nextArrow: $next,
+        dots: true,
+        appendDots: $dots,
+        fade: true,
+        infinite: false
       }
     };
 
@@ -51,5 +61,22 @@ export default function setSliders() {
     });
 
     $(slider).slick(options[name]);
+
+
+    $autoplayBtn.on('click', (e) => {
+      e.preventDefault();
+
+      if ($(e.currentTarget).hasClass('is-playing')) {
+        $(e.currentTarget).removeClass('is-playing');
+
+        $(slider).slick('slickSetOption', 'autoplay', false, true);
+
+        
+      } else {
+        $(e.currentTarget).addClass('is-playing');
+
+        $(slider).slick('slickSetOption', 'autoplay', true, true);
+      }
+    });
   });
 };

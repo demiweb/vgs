@@ -1,0 +1,34 @@
+{% import "../data/_nights-tables.html" as tables %}
+
+<!-- begin section -->
+<section class="section section--content">
+  <div class="section__title">
+    <h2 class="h2 h2--md">БЕСПЛАТНЫЕ НОЧИ В ПАРИЖЕ</h2>
+  </div>
+
+  {% include "partials/_banner.html" %}
+
+  <!-- begin descr-block -->
+  <div class="descr-block">
+    {% for i in tables.tables %}
+    <div class="descr-block__title">
+      {{ i.title | safe }}
+    </div>
+
+    <div class="descr-block__content">
+      {% for j in i.blocks %}
+      <!-- begin hotel-info -->
+      <div class="hotel-info">
+        <div class="hotel-info__title">{{ j.title }}</div>
+
+        <div class="hotel-info__text">{{ j.text | safe }}</div>
+      </div>
+      <!-- end hotel-info -->
+      {% endfor %}
+    </div>
+    {% endfor %}
+    
+  </div>
+  <!-- end descr-block -->
+</section>
+<!-- end section -->

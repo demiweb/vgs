@@ -12,6 +12,9 @@ input, textarea
   +placeholder
     font-family: inherit
 
+.is-center
+  text-align: center
+
 .icon
   display: inline-block
   fill: currentColor
@@ -23,6 +26,9 @@ input, textarea
   margin-right: auto
 
 .container
+  width: 1110px
+  margin-left: auto
+  margin-right: auto
   &--md
     width: 960px
     margin-left: auto
@@ -82,8 +88,9 @@ input, textarea
   text-transform: uppercase
   background-color: #c91426
   padding: 7px 14px
-  +tr(box-shadow .3s, opacity .4s)
+  +tr(box-shadow .3s, opacity .4s, color .3s, background-color .3s)
   font-size: 12px
+  cursor: pointer
   +hover
     box-shadow: 0 0 5px #000
 
@@ -92,6 +99,9 @@ input, textarea
     font-weight: 700
     border-radius: 3px
     background-color: #6e6d70
+    +hover
+      box-shadow: none
+      background-color: #036
   &--white
     background-color: #fff
     opacity: .8
@@ -110,13 +120,48 @@ input, textarea
     padding: 2px
     font-size: 16px
     font-weight: 400
-    color: #000
+    // color: #000
+    color: buttontext
     // background-color: #e0e0e0
     -webkit-appearance: push-button
     background-color: buttonface
     border-radius: 2px
+    cursor: default
     +hover
       box-shadow: none
+      border-color: gray
+    &:active
+      border-style: inset
+  &--lg
+    background-color: #e7e7ed
+    border: 3px solid  #9f9da9
+    color: #5e5d5d
+    min-width: 245px
+    // font-weight: 700
+    font-size: 18px
+    position: relative
+    z-index: 1
+    +hover
+      box-shadow: none
+      color: #fff
+      background-color: #9f9da9
+    &__wrap
+      position: relative
+      text-align: center
+      +before
+        background-color: #9f9da9
+        height: 3px
+        width: 100%
+        top: 50%
+        transform: translate(0, -50%)
+        left: 0
+        position: absolute
+        z-index: 0
+
+  &--sm
+    padding-top: 2px
+    padding-bottom: 2px
+
 
 .news
   // font-size: 0
@@ -124,6 +169,49 @@ input, textarea
     +flex()
   &__item
     display: block
+    font-size: 12px
+    max-width: 650px
+    text-align: left
+    +hover
+      // strong
+      //   &::before
+      //     transform: translate(3px, 0)
+    .h3, h3
+      text-align: left
+      margin-bottom: 5px
+    +clr
+    img
+      float: left
+      margin-right: 10px
+      margin-right: 10px
+    p
+      margin-bottom: 20px
+    strong
+      text-transform: uppercase
+      font-weight: 700
+      color: #036
+      display: inline-block
+      margin-left: 30px
+      position: relative
+      padding-left: 20px
+      position: relative
+      +before
+        content: '›'
+        color: #fff
+        font-size: 11px
+        background-color: #ccc
+        height: 15px
+        width: 15px
+        line-height: 12px
+        text-align: center
+        display: inline-block
+        border-radius: 50%
+        vertical-align: middle
+        position: relative
+        position: absolute
+        left: 0
+        top: 0
+
 
 .breadcrumbs
   font-weight: 700
@@ -209,7 +297,9 @@ input, textarea
     a
       &:last-child
         font-size: 12px
-        color: #555
+        +tr(color .3s)
+        +hover
+          color: #555
 
 .textarea
   label
@@ -240,3 +330,71 @@ input, textarea
   display: inline-block
   vertical-align: top
   border: 1px solid  #c7c7c8
+
+.map
+  padding-top: 20px
+  h3, .h3
+    margin-bottom: 0
+  a
+    font-weight: 700
+
+.banner
+  text-align: center
+  padding-top: 30px
+
+.descr-block
+  background-color: #f9f9fa
+  width: 100%
+  border: 1px solid  #e0e0e1
+  border-top: 0
+  padding: 0
+  &__title
+    padding-top: 9px
+    padding-bottom: 9px
+    text-align: center
+    border-bottom: 1px solid  #e0e0e1
+    h3, .h3
+      margin-bottom: 0
+    +notfirst
+      border-top: 1px solid  #e0e0e1
+  &__content
+    padding-top: 10px
+    padding-bottom: 10px
+    font-size: 13px
+    color: #333333
+    padding-left: 10px
+    padding-right: 20px
+    p
+      +notlast
+        // margin-bottom: 20px
+    ul
+      list-style-type: square
+      margin-left: 15px
+    li
+      position: relative
+      margin-bottom: 3px
+  &__link
+    text-align: center
+    color: #036
+    font-weight: 700
+    text-align: center
+    margin-bottom: 20px
+    display: inline-block
+    +before
+      content: '→'
+      font-size: 1.5em
+      display: inline-block
+      margin-right: 10px
+
+.hotel-info
+  margin-bottom: 20px
+  a, strong
+    color: #111
+    font-weight: 700
+    +tr(color .3s)
+    +hover
+      color: #555
+  &__title
+    font-size: 13px
+    font-weight: 700
+    color: #036

@@ -19,9 +19,23 @@
   margin-bottom: 15px
   cursor: help
   position: relative
+  width: 33.33333%
+  +flex(center, center)
   +hover
     .feature__tooltip
       display: block
+  &__icon
+    margin-right: 15px
+  &__title
+    text-transform: uppercase
+    font-size: 36px
+    margin-bottom: 5px
+    color: #036
+    font-weight: 700
+  &__text
+    +roman
+    text-transform: uppercase
+    // font-size: 18px
   &__tooltip
     position: absolute
     background-color: rgba(0,0,0,0.7)
@@ -37,11 +51,6 @@
     display: none
     text-align: center
     +before
-      // +arr(10,50, rgba(0,0,0,0.7), t)
-      // position: absolute
-      // bottom: 100%
-      // left: 0
-
       width: 0
       height: 0
       border-bottom: 10px solid #4D4C4D

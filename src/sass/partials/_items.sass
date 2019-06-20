@@ -1,26 +1,36 @@
 .items
-  +flex(flex-start, normal, row, wrap)
+  +flex(center, normal, row, wrap)
   margin-left: -15px
   margin-right: -15px
   &--lg
-    justify-content: center
-    padding: 40px
-    margin-left: -45px
-    margin-right: -45px
+    // justify-content: center
+    // padding: 40px
+    // margin-left: -45px
+    // margin-right: -45px
+    padding-left: 15px
+    padding-right: 15px
   &--shadow
     margin-left: 0
     margin-right: 0
     justify-content: center
+  &--img
+    // display: block
+    margin-left: 0
+    margin-right: 0
+
 
 .item
   $this: &
-  width: calc(33.33333% - 30px)
+  // width: calc(33.33333% - 30px)
+  width: calc(25% - 20px)
   text-align: center
-  margin-left: 15px
-  margin-right: 15px
+  margin-left: 10px
+  margin-right: 10px
   position: relative
   overflow: hidden
   display: block
+  img
+    height: auto
   +hover
     #{$this}__cover
       visibility: visible
@@ -40,7 +50,8 @@
     font-weight: 700
     display: block
   &__img
-    height: 180px
+    // height: 180px
+    padding-top: 40%
     width: 100%
     +cover
     display: block
@@ -54,6 +65,7 @@
     padding-top: 20px
     padding-bottom: 5px
     +tr(opacity .3s, visibility .3s)
+    +flex(center, center, column)
   &__cover-title
     text-transform: uppercase
     color: #fff
@@ -75,9 +87,14 @@
     opacity: 0
     +tr(opacity .5s, transform .3s)
 
+  &--three
+    width: calc(33.33333% - 30px)
+
   &--tour
     position: relative
-    height: 300px
+    // height: 300px
+    height: auto
+    padding-top: 25%
     margin-bottom: 15px
     +hover
       #{$this}__img
@@ -109,15 +126,16 @@
       z-index: 0
 
   &--lg
-    margin-left: 45px
-    margin-right: 45px
-    width: calc(33.33333% - 90px)
-    +notlast
-      margin-bottom: 80px
+    // margin-left: 45px
+    // margin-right: 45px
+    // width: calc(33.33333% - 90px)
+    
+    margin-bottom: 40px
     +hover
       #{$this}__img
         +scale(1)
-
+    #{$this}__img
+      padding-top: 90%
     #{$this}__title
       color: #6c6c6c
       font-weight: 700
@@ -144,7 +162,7 @@
   &--shadow
     margin-left: 0
     margin-right: 0
-    width: 33.33333%
+    // width: 33.33333%
     box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1)
     padding: 15px 15px 0px
     background-color: #f5f5f5
@@ -159,7 +177,8 @@
       margin-right: -15px
       // letter-spacing: -.1em
     #{$this}__img
-      height: 280px
+      // height: 280px
+      padding-top: 100%
       margin-bottom: 15px
     #{$this}__cover-title
       background-color: transparent
@@ -172,5 +191,54 @@
       +flex(center, center, column)
     #{$this}__cover-btn
       +scale(1.5)
+  &--img
+    margin-left: 0px
+    margin-right: 0px
+    width: 25%
+    // width: calc(33.33333% - 0px)
+    padding: 15px
+    border: 1px solid #c7c7c8
+    +hover
+      #{$this}__img
+        +scale(1)
+      #{$this}__title
+        opacity: 1
+    #{$this}__title
+      position: absolute      
+      z-index: 1
+      left: 15px
+      right: 15px
+      bottom: 15px
+      background-color: rgba(#000, .7)
+      padding: 10px
+      padding-right: 30px
+      opacity: .8
+      +tr(opacity .3s)
+      +before
+        content: '+'
+        background-color: #a4a5a8
+        width: 16px
+        height: 16px
+        line-height: 16px
+        text-align: cente
+        color: #351237
+        position: absolute
+        top: 50%
+        transform: translate(0, -50%)
+        right: 10px
+      .h3, h3
+        margin-bottom: 0
+        text-align: left
+        +reg
+        font-weight: 400
+        font-size: 18px
+    #{$this}__img
+      padding-top: 80%
+
+  &--card
+    margin-left: 2px
+    margin-right: 2px
+    width: calc(25% - 4px)
+
     
 

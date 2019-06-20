@@ -1,0 +1,27 @@
+<!-- begin banner -->
+<div class="banner">
+  
+  {% if descrSlider %}
+  <!-- begin slider -->
+  <div class="slider__wrap slider--sm__wrap">
+    <div class="slider slider--sm js-slider" data-slider="small">
+      {% for i in range(0, 2) %}
+      <!-- begin slide -->
+      <div class="slide">
+        <img src="http://vgs-company.com/published/publicdata/A1475891/attachments/SC/images/01-0136.png" width="657" height="271">
+      </div>
+      <!-- end slide -->
+      {% endfor %}
+    </div>
+
+    <div class="slider__dots js-dots"></div>
+    <button class="slider__prev js-prev"></button>
+    <button class="slider__next js-next"></button>
+  </div>
+  <!-- end slider -->
+  {% else %}
+  <img src="http://vgs-company.com/published/publicdata/A1475891/attachments/SC/images/01-0136.png" width="657" height="271">
+  {% endif %}
+  <img src="http://vgs-company.com/published/publicdata/A1475891/attachments/SC/images/0125.png" width="640" height="41">
+</div>
+<!-- end banner -->

@@ -5,22 +5,33 @@ export default function setPopups() {
   const popup = new Popup();
   let index;
 
-  popup.onOpen = ($btn, $popup) => {
-    const $slider = $popup.find('.js-slider');
-    index = +$btn[0].getAttribute('data-to');
+  popup.onOpen = ($btn, $popup) => {    
+    const $parentSliderWrap = $btn.closest('.slider__wrap');
 
-    $slider.on('init reInit afterChange', (e, slick, currentSlide, nextSlide) => {
-      index = currentSlide;
-      console.log(index);
-    });
+    if ($parentSliderWrap.length > 0) {      
+      const $parentSlider = $parentSliderWrap.find('.js-slider');
+      const $autoplayBtn = $parentSliderWrap.find('.js-autoplay');
 
-    $slider.addClass('has-no-transition');
+      $autoplayBtn.removeClass('is-playing');
+      $parentSlider.slick('slickSetOption', 'autoplay', false, true);
 
-    setTimeout(() => {
-      $slider.removeClass('has-no-transition');
-    }, 100);
+      const $slider = $popup.find('.js-slider');
+      index = +$btn[0].getAttribute('data-to');
 
-    $slider.slick('slickGoTo', index);
+      $slider.on('init reInit afterChange', (e, slick, currentSlide, nextSlide) => {
+        index = currentSlide;
+        console.log(index);
+      });
+
+      $slider.addClass('has-no-transition');
+
+      setTimeout(() => {
+        $slider.removeClass('has-no-transition');
+      }, 100);
+
+      $slider.slick('slickGoTo', index);
+
+    };
   };
   popup.onClose = ($btn, $popup) => {
     if($btn.hasClass('js-fullscreen')) {

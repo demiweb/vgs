@@ -1,0 +1,37 @@
+<!-- begin section -->
+<section class="section section--content">
+  <div class="section__title">
+    <h2 class="h2 h2--md">ЭКСКУРСИИ</h2>
+  </div>
+
+  <!-- begin items -->
+  <div class="items cards">
+    {% for i in range(0, 6) %}
+    <!-- begin item -->
+    <a href="#" class="item item--card card">
+      {# <span class="card__img" style="background-image: url('img/cards/1.jpg');"></span> #}
+
+      <img src="img/cards/1.jpg" alt="">
+
+      <span class="card__title">
+        Lorem ipsum dolor.
+      </span>
+
+      <span class="card__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci itaque sapiente architecto doloribus dolor nisi! Esse facere repellat, magni consequuntur alias porro voluptatem repudiandae animi omnis illum quasi, a expedita.</span>
+
+      <span class="card__btn">
+        {{ mixins.btn(
+          title = 'Подробнее',
+          mod = 'btn--gray',
+          isInline = true,
+          href = false
+        ) }}
+      </span>
+    </a>
+    <!-- end item -->
+    {% endfor %}
+  </div>
+  <!-- end items -->
+
+</section>
+<!-- end section -->

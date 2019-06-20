@@ -1,16 +1,19 @@
 {%set
 features = [
   {
-    img: '01-LOGO-01.png',
-    tooltip: 'Самое популярное направление за неделю: Нормандия'
+    img: '01-LOGO-01.jpg',
+    tooltip: 'Самое популярное направление за неделю: Нормандия',
+    text: 'куда угодно'
   },
   {
-    img: '01-LOGO-02.png',
-    tooltip: 'Самый лучший отель за неделю: Myfair 4*'
+    img: '01-LOGO-02.jpg',
+    tooltip: 'Самый лучший отель за неделю: Myfair 4*',
+    text: 'надежно'
   },
   {
-    img: '01-LOGO-03.png',
-    tooltip: 'Количество забронированных за неделю: 5-ть горнолыжных FIT туров'
+    img: '01-LOGO-03.jpg',
+    tooltip: 'Количество забронированных за неделю: 5-ть горнолыжных FIT туров',
+    text: 'вовремя'
   }
 ]
 %}
@@ -21,7 +24,15 @@ features = [
     <div class="features__hr"></div>
     {% for i in features %}
     <div class="feature">
-      <img src="img/{{ i.img }}" alt="">
+      <div class="feature__icon">
+        <img src="img/{{ i.img }}" alt="">
+      </div>
+
+      <div class="feature__content">
+        <div class="feature__title">100%</div>
+        <div class="feature__text">{{ i.text }}</div>
+      </div>
+      
 
       <div class="feature__tooltip">{{ i.tooltip }}</div>
     </div>

@@ -1,0 +1,214 @@
+{%set
+tables = [
+  {
+    title: '<h2 class="h2--md h2--blue">07.11 - 22.12.2015 / 10.01 - 31.03.2016</h2><h3 class="h3 h3--blue h3--ttn">Три  ночи по цене двух  /  3=2</h3>',
+    blocks: [
+      {
+        title: 'Hotel Montfleuri Arc   de  Triomphe  4*',
+        text: '<p>Отель расположен на одной из самых красивых улиц Парижа - Grande Armee avenue, в двух шагах от знаменитой улицы Елисейские Поля и торжественной Триумфальной Арки.</p>
+        <p>Сайт отеля:  <a href="http://www.paris-hotel-montfleuri.com/" target="_blank">www.paris-hotel-montfleuri.com</a></p>'
+      },
+      {
+        title: 'TilsittEtoile 3*',
+        text: '<p>Комфортабельный отель, расположенный на тихой улице в центральной части Парижа, в двух шагах от проспекта Елисейские Поля, Триумфальной Арки и конгресс-центра Porte Maillot.</p>
+        <p>Сайт отеля: <a href="http://www.tilsitt.com/" target="_blank">www.tilsitt.com</a></p>'
+      },
+      {
+        title: 'Hotel Tivoli 3*',
+        text: '<p>Отель-бутик, расположенный в центральной части Парижа, рядом с Триумфальной Аркой и Елисейскими полями.</p>
+        <p>Сайт отеля:  <a href="http://www.hotel-tivoli-paris-champs-elysees.com/" target="_blank">www.hotel-tivoli-paris-champs-elysees.com</a></p>'
+      },
+      {
+        title: 'Hotel de Sevigne  3*',
+        text: '<p>Тихий и уютный отель, расположенный в центральной части Парижа, в 16-ом округе, недалеко от Триумфальной Арки, проспекта Елисейские Поля, площади Трокадеро и Эйфелевой башни.</p>
+        <p>Сайт отеля:  <a href="http://www.hotel-paris-desevigne.com/" target="_blank">www.hotel-paris-desevigne.com</a></p>'
+      },
+      {
+        title: 'L`Edmond 4*',
+        text: '<p>Отель расположен в исторической части Парижа вблизи таких достопримечательностей, как Музей Орсе, Эйфелева башня и Gare St. Lazare.</p>
+        <p>Сайт отеля: <a href="http://www.edmond-hotel.fr/">www.edmond-hotel.fr/</a></p>'
+      },
+      {
+        title: 'Hotel Moliere  4* ',
+        text: '<p>Отель в классическом парижском стиле, расположенный в эпицентре культурной и коммерческой жизни Парижа - на тихой центральной улице, вблизи музея Лувр, Королевского Дворца и многих других достопримечательностей города.</p>
+        <p>Сайт отеля:  <strong>www.hotel-moliere.fr/fr/</strong></p>'
+      },
+      {
+        title: 'Hotel Park Lane 4*',
+        text: '<p>Бутик-отель расположен вблизи Оперы и магазина GallerieLafayette. В 280 метрах находится станция метро Miromesnil, от которой можно добраться до Елисейских полей.</p>
+        <p>Сайт отеля:<strong>  www.hotelparklaneparis.com</strong></p>'
+      },
+      {
+        title: 'Hotel Le 29 Lepic Montmartre 3*',
+        text: '<p>Полностью реконструированный в 2012 году, отель 29 Lepic Hotel Montmartre расположен в Париже, в самом сердце района Montmartre, рядом с кафе Les Deux Moulins, районом Abbesses, площадью Tertre.</p>
+        <p>Сайт отеля:  <a href="http://www.29lepic.fr/" target="_blank">www.29lepic.fr</a></p>'
+      },
+      {
+        title: 'Hotel Bailli de Suffren 3*',
+        text: '<p>Отель расположен в центральной части Парижа, на элегантной улице De Suffren, в непосредственной близости от него находятся многочисленные министерства и посольства, здание Юнеско и достопримечательности города: Эйфелева Башня, Собор Дома Инвалидов, Марсово Поле и Музей Orsay.</p>
+        <p>Сайт отеля:  <strong>www.lebailliparis.com</strong></p>'
+      },
+      {
+        title: 'Hotel Eiffel  Saint Charles  3*',
+        text: '<p>Отель Eiffel Saint Charles находится в 900 метрах от всемирно известной Эйфелевой башни в 15 округе Парижа, а также не далеко Елисейские поля, Триумфальная арка и Лувр.</p>
+        <p>Сайт отеля: <a href="http://www.hotel-eiffel-saint-charles.com/">www.hotel-eiffel-saint-charles.com</a></p>'
+      },
+      {
+        title: 'Hotel de l`Avenir 3*',
+        text: '<p>Уютный отель, расположенный на левом берегу реки Сены, в двух шагах от Люксембургского Сада и оживленных улиц Латинского квартала, где сосредоточены модные бутики, стильные кафе и фешенебельные рестораны. В окрестностях отеля гости найдут такие достопримечательности, как Собор Парижской Богоматери, Музей Лувр, Музей Orsay и квартал Сен-Жермен-де-Пре.</p>
+        <p>Сайт отеля: <a href="http://www.hoteldelavenir.com/">www.hoteldelavenir.com</a></p>'
+      },
+      {
+        title: 'Hotel Wilson Opera  3*',
+        text: '<p>Отель расположен в самом сердце Парижа недалеко от вокзала Сан-Лазар, Оперы и площади Мадлен в оживленном районе, где находится множество модных магазинов, художественных галерей, музеев и театров.</p>
+        <p>Сайт отеля: <a href="http://www.hotelwo.com/">www.hotelwo.com</a></p>'
+      },
+      {
+        title: 'Hotel Le Clement 2*',
+        text: '<p>Уютный отель, расположенный в сердце легендарного квартала Сен-Жермен-де-Пре, на тихой улочке между Люксембургским Садом и площадью De L`Odeon.</p>
+        <p>Сайт отеля: <a href="http://www.hotel-clement.com/" target="_blank">www.hotel-clement.com</a></p>'
+      }
+    ]
+  },
+  {
+    title: '<h3 class="h3 h3--blue h3--ttn">Четыре ночи по цене  трех  / 4=3</h3>',
+    blocks: [
+      {
+        title: 'Hotel Montfleuri Arc   de  Triomphe  4*',
+        text: '<p>Отель расположен на одной из самых красивых улиц Парижа - Grande Armee avenue, в двух шагах от знаменитой улицы Елисейские Поля и торжественной Триумфальной Арки.</p>
+        <p>Сайт отеля:  <a href="http://www.paris-hotel-montfleuri.com/" target="_blank">www.paris-hotel-montfleuri.com</a></p>'
+      },
+      {
+        title: 'TilsittEtoile 3*',
+        text: '<p>Комфортабельный отель, расположенный на тихой улице в центральной части Парижа, в двух шагах от проспекта Елисейские Поля, Триумфальной Арки и конгресс-центра Porte Maillot.</p>
+        <p>Сайт отеля: <a href="http://www.tilsitt.com/" target="_blank">www.tilsitt.com</a></p>'
+      },
+      {
+        title: 'Hotel Tivoli 3*',
+        text: '<p>Отель-бутик, расположенный в центральной части Парижа, рядом с Триумфальной Аркой и Елисейскими полями.</p>
+        <p>Сайт отеля:  <a href="http://www.hotel-tivoli-paris-champs-elysees.com/" target="_blank">www.hotel-tivoli-paris-champs-elysees.com</a></p>'
+      },
+      {
+        title: 'Hotel de Sevigne  3*',
+        text: '<p>Тихий и уютный отель, расположенный в центральной части Парижа, в 16-ом округе, недалеко от Триумфальной Арки, проспекта Елисейские Поля, площади Трокадеро и Эйфелевой башни.</p>
+        <p>Сайт отеля:  <a href="http://www.hotel-paris-desevigne.com/" target="_blank">www.hotel-paris-desevigne.com</a></p>'
+      },
+      {
+        title: 'L`Edmond 4*',
+        text: '<p>Отель расположен в исторической части Парижа вблизи таких достопримечательностей, как Музей Орсе, Эйфелева башня и Gare St. Lazare.</p>
+        <p>Сайт отеля: <a href="http://www.edmond-hotel.fr/">www.edmond-hotel.fr/</a></p>'
+      },
+      {
+        title: 'Hotel Moliere  4* ',
+        text: '<p>Отель в классическом парижском стиле, расположенный в эпицентре культурной и коммерческой жизни Парижа - на тихой центральной улице, вблизи музея Лувр, Королевского Дворца и многих других достопримечательностей города.</p>
+        <p>Сайт отеля:  <strong>www.hotel-moliere.fr/fr/</strong></p>'
+      },
+      {
+        title: 'Hotel Park Lane 4*',
+        text: '<p>Бутик-отель расположен вблизи Оперы и магазина GallerieLafayette. В 280 метрах находится станция метро Miromesnil, от которой можно добраться до Елисейских полей.</p>
+        <p>Сайт отеля:<strong>  www.hotelparklaneparis.com</strong></p>'
+      },
+      {
+        title: 'Hotel Le 29 Lepic Montmartre 3*',
+        text: '<p>Полностью реконструированный в 2012 году, отель 29 Lepic Hotel Montmartre расположен в Париже, в самом сердце района Montmartre, рядом с кафе Les Deux Moulins, районом Abbesses, площадью Tertre.</p>
+        <p>Сайт отеля:  <a href="http://www.29lepic.fr/" target="_blank">www.29lepic.fr</a></p>'
+      },
+      {
+        title: 'Hotel Bailli de Suffren 3*',
+        text: '<p>Отель расположен в центральной части Парижа, на элегантной улице De Suffren, в непосредственной близости от него находятся многочисленные министерства и посольства, здание Юнеско и достопримечательности города: Эйфелева Башня, Собор Дома Инвалидов, Марсово Поле и Музей Orsay.</p>
+        <p>Сайт отеля:  <strong>www.lebailliparis.com</strong></p>'
+      },
+      {
+        title: 'Hotel Eiffel  Saint Charles  3*',
+        text: '<p>Отель Eiffel Saint Charles находится в 900 метрах от всемирно известной Эйфелевой башни в 15 округе Парижа, а также не далеко Елисейские поля, Триумфальная арка и Лувр.</p>
+        <p>Сайт отеля: <a href="http://www.hotel-eiffel-saint-charles.com/">www.hotel-eiffel-saint-charles.com</a></p>'
+      },
+      {
+        title: 'Hotel de l`Avenir 3*',
+        text: '<p>Уютный отель, расположенный на левом берегу реки Сены, в двух шагах от Люксембургского Сада и оживленных улиц Латинского квартала, где сосредоточены модные бутики, стильные кафе и фешенебельные рестораны. В окрестностях отеля гости найдут такие достопримечательности, как Собор Парижской Богоматери, Музей Лувр, Музей Orsay и квартал Сен-Жермен-де-Пре.</p>
+        <p>Сайт отеля: <a href="http://www.hoteldelavenir.com/">www.hoteldelavenir.com</a></p>'
+      },
+      {
+        title: 'Hotel Wilson Opera  3*',
+        text: '<p>Отель расположен в самом сердце Парижа недалеко от вокзала Сан-Лазар, Оперы и площади Мадлен в оживленном районе, где находится множество модных магазинов, художественных галерей, музеев и театров.</p>
+        <p>Сайт отеля: <a href="http://www.hotelwo.com/">www.hotelwo.com</a></p>'
+      },
+      {
+        title: 'Hotel Le Clement 2*',
+        text: '<p>Уютный отель, расположенный в сердце легендарного квартала Сен-Жермен-де-Пре, на тихой улочке между Люксембургским Садом и площадью De L`Odeon.</p>
+        <p>Сайт отеля: <a href="http://www.hotel-clement.com/" target="_blank">www.hotel-clement.com</a></p>'
+      }
+    ]
+  },
+  {
+    title: '<h3 class="h3 h3--blue h3--ttn">Семь ночей по цене шести  / 7=6</h3>',
+    blocks: [
+      {
+        title: 'Hotel Montfleuri Arc   de  Triomphe  4*',
+        text: '<p>Отель расположен на одной из самых красивых улиц Парижа - Grande Armee avenue, в двух шагах от знаменитой улицы Елисейские Поля и торжественной Триумфальной Арки.</p>
+        <p>Сайт отеля:  <a href="http://www.paris-hotel-montfleuri.com/" target="_blank">www.paris-hotel-montfleuri.com</a></p>'
+      },
+      {
+        title: 'TilsittEtoile 3*',
+        text: '<p>Комфортабельный отель, расположенный на тихой улице в центральной части Парижа, в двух шагах от проспекта Елисейские Поля, Триумфальной Арки и конгресс-центра Porte Maillot.</p>
+        <p>Сайт отеля: <a href="http://www.tilsitt.com/" target="_blank">www.tilsitt.com</a></p>'
+      },
+      {
+        title: 'Hotel Tivoli 3*',
+        text: '<p>Отель-бутик, расположенный в центральной части Парижа, рядом с Триумфальной Аркой и Елисейскими полями.</p>
+        <p>Сайт отеля:  <a href="http://www.hotel-tivoli-paris-champs-elysees.com/" target="_blank">www.hotel-tivoli-paris-champs-elysees.com</a></p>'
+      },
+      {
+        title: 'Hotel de Sevigne  3*',
+        text: '<p>Тихий и уютный отель, расположенный в центральной части Парижа, в 16-ом округе, недалеко от Триумфальной Арки, проспекта Елисейские Поля, площади Трокадеро и Эйфелевой башни.</p>
+        <p>Сайт отеля:  <a href="http://www.hotel-paris-desevigne.com/" target="_blank">www.hotel-paris-desevigne.com</a></p>'
+      },
+      {
+        title: 'L`Edmond 4*',
+        text: '<p>Отель расположен в исторической части Парижа вблизи таких достопримечательностей, как Музей Орсе, Эйфелева башня и Gare St. Lazare.</p>
+        <p>Сайт отеля: <a href="http://www.edmond-hotel.fr/">www.edmond-hotel.fr/</a></p>'
+      },
+      {
+        title: 'Hotel Moliere  4* ',
+        text: '<p>Отель в классическом парижском стиле, расположенный в эпицентре культурной и коммерческой жизни Парижа - на тихой центральной улице, вблизи музея Лувр, Королевского Дворца и многих других достопримечательностей города.</p>
+        <p>Сайт отеля:  <strong>www.hotel-moliere.fr/fr/</strong></p>'
+      },
+      {
+        title: 'Hotel Park Lane 4*',
+        text: '<p>Бутик-отель расположен вблизи Оперы и магазина GallerieLafayette. В 280 метрах находится станция метро Miromesnil, от которой можно добраться до Елисейских полей.</p>
+        <p>Сайт отеля:<strong>  www.hotelparklaneparis.com</strong></p>'
+      },
+      {
+        title: 'Hotel Le 29 Lepic Montmartre 3*',
+        text: '<p>Полностью реконструированный в 2012 году, отель 29 Lepic Hotel Montmartre расположен в Париже, в самом сердце района Montmartre, рядом с кафе Les Deux Moulins, районом Abbesses, площадью Tertre.</p>
+        <p>Сайт отеля:  <a href="http://www.29lepic.fr/" target="_blank">www.29lepic.fr</a></p>'
+      },
+      {
+        title: 'Hotel Bailli de Suffren 3*',
+        text: '<p>Отель расположен в центральной части Парижа, на элегантной улице De Suffren, в непосредственной близости от него находятся многочисленные министерства и посольства, здание Юнеско и достопримечательности города: Эйфелева Башня, Собор Дома Инвалидов, Марсово Поле и Музей Orsay.</p>
+        <p>Сайт отеля:  <strong>www.lebailliparis.com</strong></p>'
+      },
+      {
+        title: 'Hotel Eiffel  Saint Charles  3*',
+        text: '<p>Отель Eiffel Saint Charles находится в 900 метрах от всемирно известной Эйфелевой башни в 15 округе Парижа, а также не далеко Елисейские поля, Триумфальная арка и Лувр.</p>
+        <p>Сайт отеля: <a href="http://www.hotel-eiffel-saint-charles.com/">www.hotel-eiffel-saint-charles.com</a></p>'
+      },
+      {
+        title: 'Hotel de l`Avenir 3*',
+        text: '<p>Уютный отель, расположенный на левом берегу реки Сены, в двух шагах от Люксембургского Сада и оживленных улиц Латинского квартала, где сосредоточены модные бутики, стильные кафе и фешенебельные рестораны. В окрестностях отеля гости найдут такие достопримечательности, как Собор Парижской Богоматери, Музей Лувр, Музей Orsay и квартал Сен-Жермен-де-Пре.</p>
+        <p>Сайт отеля: <a href="http://www.hoteldelavenir.com/">www.hoteldelavenir.com</a></p>'
+      },
+      {
+        title: 'Hotel Wilson Opera  3*',
+        text: '<p>Отель расположен в самом сердце Парижа недалеко от вокзала Сан-Лазар, Оперы и площади Мадлен в оживленном районе, где находится множество модных магазинов, художественных галерей, музеев и театров.</p>
+        <p>Сайт отеля: <a href="http://www.hotelwo.com/">www.hotelwo.com</a></p>'
+      },
+      {
+        title: 'Hotel Le Clement 2*',
+        text: '<p>Уютный отель, расположенный в сердце легендарного квартала Сен-Жермен-де-Пре, на тихой улочке между Люксембургским Садом и площадью De L`Odeon.</p>
+        <p>Сайт отеля: <a href="http://www.hotel-clement.com/" target="_blank">www.hotel-clement.com</a></p>'
+      }
+    ]
+  }
+]
+%}

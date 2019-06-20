@@ -6,7 +6,7 @@ small
   font-size: inherit
 
 em, i
-  font-style: normal
+  // font-style: normal
 
 h1, h2, h3, h4, h5, h6
   font-weight: 400
@@ -24,6 +24,12 @@ h1, h2, h3, h4, h5, h6
     color: #808080  
   &--white
     color: #fff
+  &--blue
+    +reg
+    color: #036
+    font-weight: 700
+  &--ttn
+    text-transform: none
 
 .h3, h3
   font-size: 16px
@@ -42,6 +48,13 @@ h1, h2, h3, h4, h5, h6
     font-size: 15px
   &--white
     color: #fff
+  &--gray
+    color: #808080
+  &--ttn
+    text-transform: none
+  &--blue
+    color: #036
+    +reg
 
 .h4, h4
   font-size: 13px
@@ -49,7 +62,23 @@ h1, h2, h3, h4, h5, h6
   color: #808080
   +verdana
   font-weight: 700px
+  &--blue
+    color: #036
+    +reg
+  &--ttn
+    text-transform: none
+  &--lg
+    font-size: 14px
 
 .h5, h5
 
 .h6, h6
+
+.text
+  &--italic, i
+    font-size: 12px
+    font-style: italic
+    color: #003366
+    font-weight: 700
+  &--center
+    text-align: center
