@@ -48,6 +48,18 @@
 
 
   &--hero
+    .slick-dots
+      bottom: 20px
+      li
+        &.slick-active
+          button
+            background-color: #fff
+      button
+        background-color: #ccc
+        border-radius: 50%
+        &::before
+          display: none
+        
     &__wrap
       overflow: hidden
       +hover

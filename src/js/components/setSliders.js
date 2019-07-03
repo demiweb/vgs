@@ -19,7 +19,8 @@ export default function setSliders() {
         prevArrow: $prev,
         nextArrow: $next,
         autoplay: true,
-        fade: true
+        fade: true,
+        dots: true
       },
       partners: {
         prevArrow: $prev,
